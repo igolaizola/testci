@@ -13,8 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
+        run: |
+          echo "🥝"
+      - name: test-release
         if: github.ref == 'refs/heads/main'
         run: |
           echo "🍉"
           echo '${{ toJSON(github.event.commits) }}' | jq '.[].message'
-          echo "🥝"
+          echo "🍓"
