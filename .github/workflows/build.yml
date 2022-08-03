@@ -14,10 +14,10 @@ jobs:
     steps:
       - name: test
         run: |
-          echo "🥝"
+          echo "🍓"
       - name: test-release
         if: github.ref == 'refs/heads/main'
         run: |
           echo "🍉"
           echo '${{ toJSON(github.event.commits) }}' | jq '.[].message'
-          echo "🍓"
+          echo "🥝"
